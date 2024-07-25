@@ -5,8 +5,6 @@ const AcademicsPage = () => {
   return (
     <div className="container-fluid">
       <section className="academics-section">
-        {/* <h2>Academics</h2> */}
-
         <div className="curriculum-section">
           <h3>Curriculum</h3>
           <ul>

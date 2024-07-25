@@ -1,7 +1,7 @@
 import React from "react";
-// import "/image.png"
 import { Link } from "react-router-dom";
 import "../App.css";
+
 const Header = () => {
   return (
     <header className="App-header">

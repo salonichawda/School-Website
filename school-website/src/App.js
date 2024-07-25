@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
 import HomePage from "./components/Home";
 import AboutPage from "./components/About";
 import AcademicsPage from "./components/Academics";
@@ -8,8 +9,8 @@ import FacultyPage from "./components/Faculty";
 import StudentsPage from "./components/Students";
 import GalleryPage from "./components/Gallery";
 import ContactPage from "./components/Contact";
-import "./App.css"; // Assuming you have some basic global styles
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );

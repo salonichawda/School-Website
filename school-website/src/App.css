@@ -9,18 +9,11 @@ body {
 .navbar {
   background-color: #7c0a02 !important;
   color: white !important;
-  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
-  /* z-index: 1000; Ensures header is above other content */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* .navbar {
-  display: flex;
-  list-style-type: none;
-} */
 
 #navbarNav {
   width: 100%;
@@ -42,9 +35,8 @@ body {
   color: #fff !important;
 }
 
-.navbar-nav li :hover {
+.navbar-nav li a:hover {
   text-decoration: underline;
-  color: #fff !important;
 }
 
 .container-fluid {
@@ -70,32 +62,16 @@ body {
   line-height: 1.6;
 }
 
-.section-content {
-  margin-bottom: 20px;
-}
-
-.section-content ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
 .icon--school-logo {
   width: 150px;
   height: 150px;
 }
-
-/* .container {
-  position: relative;
-  z-index: 1;
-  scroll-padding-top: 80px;
-} */
 
 .carousel-section {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  /* justify-content: start; */
 }
 
 .carousel-item img {
@@ -111,7 +87,6 @@ body {
 }
 
 .custom-carousel-caption {
-  /* width: inherit;  */
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -121,12 +96,6 @@ body {
 
 .school-description {
   width: inherit;
-  height: 400px;
-  text-align: center !important;
-  background-image: url("/public/Springdales-School-Dubai.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
   padding: 20px;
 }
 
@@ -134,12 +103,7 @@ body {
   text-align: left;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  /* font-weight: 200; */
   padding: 8px;
-}
-
-.container-fluid {
-  width: 100%;
 }
 
 .about-section {
@@ -177,7 +141,6 @@ body {
 .class-rooms-section img {
   width: 620px;
   height: 400px;
-  /* padding: 30px; */
   border: 1px solid black;
   box-shadow: 0px 1px 4px 1px grey;
 }
@@ -189,7 +152,6 @@ body {
 .sport-section img {
   width: 400px;
   height: 260px;
-  /* padding: 30px; */
   border: 1px solid black;
   box-shadow: 0px 1px 4px 1px grey;
 }
@@ -207,18 +169,12 @@ body {
 .contact-details {
   flex: 1;
   margin-right: 20px;
+  background-color: #f0f0f0;
+  padding: 10px;
 }
 
 .map-section {
   flex: 1;
-}
-
-.contact-section {
-  margin-top: 20px;
-}
-
-.contact-section {
-  margin-top: 20px;
 }
 
 .contact-table {
@@ -235,10 +191,6 @@ body {
 .contact-table td:first-child {
   width: 120px;
   font-weight: bold;
-}
-
-.map-section {
-  margin-top: 10px;
 }
 
 .map-section h3 {
@@ -277,18 +229,19 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  align-items: flex-start;
 }
 
 .contact-form-section form button:hover {
   background-color: #0056b3;
 }
 
+.about-section,
 .gallery-section,
 .students-section,
 .faculty-section,
-.admissions-section,
-.admissions-form-section {
+.admission-section,
+.academics-section,
+.contact-section {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -342,14 +295,6 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
-
-/* .students-section {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-} */
 
 .life-at-springdale,
 .achievements,
@@ -432,19 +377,10 @@ body {
   }
 }
 
-/* .faculty-section {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-} */
-
 .faculty-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  /* font-weight: 500; */
 }
 
 .faculty-list h3 {
@@ -478,253 +414,191 @@ body {
   }
 }
 
-.admissions-info {
+.flex-container {
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 }
 
-.admissions-process,
-.downloadable-forms,
-.important-dates {
-  flex: 1;
+.left-column {
+  width: 45%;
 }
 
-.admissions-process h3,
-.downloadable-forms h3,
-.important-dates h3 {
-  margin-top: 0;
+.right-column {
+  width: 45%;
+}
+
+.admissions-info {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.admissions-info h3 {
   margin-bottom: 10px;
-  font-size: 18px;
-  color: #333;
 }
 
-.admissions-process p,
-.downloadable-forms p,
-.important-dates ul {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #666;
-}
-
-.important-dates ul {
+.admissions-info ul {
   list-style-type: none;
-  padding: 0;
+  padding-left: 0;
 }
 
-.important-dates ul li {
-  margin-bottom: 5px;
+.admissions-info ul ul {
+  margin-top: 5px;
 }
 
-.downloadable-forms a {
-  color: #007bff;
-  text-decoration: none;
+.admissions-info li {
+  margin-bottom: 10px;
 }
 
-.downloadable-forms a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .admissions-info {
-    flex-direction: column;
-  }
-}
-
-.admission-info {
+.admission-form h2 {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.admission-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.admission-form-header {
+  display: flex;
+  margin-top: -6;
+  border: 1px solid black;
+  background-color: #7c0a02de;
+  color: #fff;
+  padding-top: 5px 0px 5px 25px;
 }
 
-.admission-info p {
-  line-height: 1.6;
-}
-
-.admission-info ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-.admission-info ul li {
-  margin-bottom: 5px;
-}
-
-.admission-info a {
-  text-decoration: none;
-  color: #007bff; /* Adjust link color as needed */
-}
-
-.admission-info a:hover {
-  text-decoration: underline;
+.icon--school-logo-form {
+  width: 15%;
+  height: 15%;
 }
 
 .form-group {
   margin-bottom: 15px;
 }
 
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+.form-row .form-group {
+  flex: 1;
+  margin-right: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="date"],
+input[type="number"] {
   width: 100%;
   padding: 8px;
-  font-size: 1rem;
+  font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-textarea {
-  resize: vertical;
+input[type="text"],
+select {
+  width: 100%;
+  padding: 9px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
 }
 
-button[type="submit"] {
+button[type="submit"],
+button[type="button"] {
   background-color: #007bff;
   color: white;
-  padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  padding: 10px 20px;
   cursor: pointer;
-  font-size: 1rem;
+  border-radius: 4px;
 }
 
-button[type="submit"]:hover {
-  background-color: #0056b3; /* Darker shade of primary color */
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #0056b3;
 }
 
-.admission-modal {
-  text-align: center;
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.footer h3 {
+  color: #fff;
+}
+
+.footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li strong {
+  color: #fff;
+}
+
+.footer .social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer .social-icons a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.footer .social-icons a:hover {
+  color: #007bff;
+}
+
+.footer .quick-links li {
+  margin-bottom: 10px;
+}
+
+.footer .quick-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .quick-links a:hover {
+  color: #007bff;
+}
+
+.footer hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.modal-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+.footer p {
+  margin-bottom: 0;
+}
+
+.container-footer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.modal-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  width: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  max-height: 80vh; /* Limit height to 80% of viewport height */
-  overflow-y: auto; /* Enable vertical scrolling */
-}
-
-.modal-content h2 {
-  margin-top: 0;
-}
-
-.form-group {
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.form-group label {
+/* .footer .icon-section {
   display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-textarea,
-select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.name-fields {
-  display: flex;
-}
-
-.name-fields input {
-  flex: 1;
-  margin-right: 10px;
-}
-
-.birthdate-fields input {
-  flex: 1;
-  margin-right: 10px;
-}
-
-.emergency-contact-fields {
-  display: flex;
-}
-
-.emergency-contact-fields input {
-  flex: 1;
-  margin-right: 10px;
-}
-
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  font-size: 20px;
-  color: #aaa;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.download-icon {
-  text-align: right;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.download-icon svg {
-  width: 24px;
-  height: 24px;
-  fill: #333;
-}
-
-.download-icon:hover svg {
-  fill: #555;
-}
+  justify-content: center;
+} */

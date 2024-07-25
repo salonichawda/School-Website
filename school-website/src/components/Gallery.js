@@ -46,13 +46,13 @@ const GalleryPage = () => {
     },
     {
       type: "video",
-      src: "https://youtu.be/-OyepF2QkFQ?feature=shared",
+      src: "https://www.youtube.com/embed/-OyepF2QkFQ",
       alt: "Virtual tour of Springdale Public School.",
       caption: "School Tour",
     },
     {
       type: "video",
-      src: "https://youtu.be/ZKtz14UteCY?feature=shared",
+      src: "https://www.youtube.com/embed/ZKtz14UteCY",
       alt: "Highlights from the Annual Function 2023.",
       caption: "Annual Function",
     },
@@ -64,21 +64,28 @@ const GalleryPage = () => {
         <h2>Gallery</h2>
 
         <div className="gallery">
-          {galleryContent.map((item, index) => (
-            <div key={index} className={`gallery-item ${item.type}`}>
-              {item.type === "photo" ? (
-                <img src={item.src} alt={item.alt} />
-              ) : (
-                <video controls>
-                  <source src={item.src} type="video" />
-                  Your browser does not support the video tag.
-                </video>
-              )}
-              <div className="caption">
-                <p>{item.caption}</p>
+          {galleryContent.map((item, index) => {
+            return (
+              <div key={index} className={`gallery-item ${item.type}`}>
+                {item.type === "photo" ? (
+                  <img src={item.src} alt={item.alt} />
+                ) : (
+                  <iframe
+                    width="560"
+                    height="208"
+                    src={item.src}
+                    title={item.alt}
+                    // frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                )}
+                <div className="caption">
+                  <p>{item.caption}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
     </div>
